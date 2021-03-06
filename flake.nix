@@ -114,6 +114,37 @@
             };
           };
 
+          director-files-extract = stdenv.mkDerivation rec {
+            pname = "director-files-extract";
+            version = src.rev;
+
+            src = fetchFromGitHub {
+              owner = "maichiu";
+              repo = "director-files-extract";
+              rev = "6abbf96e784b8485f9e2237d4da3e5bb6ed926fe";
+              hash = "sha256-kiCB1O70tSCGU+n/lyCIf5w1HI3EkMpnVC8C+LDtclg=";
+            };
+
+            buildInputs = [ python3 ];
+
+            postPatch = ''
+              patchShebangs .
+            '';
+
+            installPhase = ''
+              mkdir --parents $out/bin
+              install shock.py $out/bin/director-files-extract
+              install fix_director_files.py $out/bin/fix-director-files
+            '';
+
+            meta = with lib; {
+              description = "Extract Director movies and casts from Windows and Mac executables";
+              license = licenses.unfree; # https://github.com/maichiu/director-files-extract/issues/4
+              maintainers = maintainers.yegortimoshenko;
+              platforms = platforms.unix;
+            };
+          };
+
           drxtract = stdenv.mkDerivation {
             pname = "drxtract";
             version = inputs.drxtract.rev;
