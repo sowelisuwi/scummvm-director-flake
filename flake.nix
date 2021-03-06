@@ -205,11 +205,12 @@
       );
 
       devShell = forAllSystems (system:
-        with self.packages.${system};
         with import nixpkgs { inherit system; };
+        with self.packages.${system};
 
         mkShell {
           buildInputs = [
+            scummvm # ScummVM (Director engine only)
             basiliskii # 68k Macintosh emulator
             drxtract # Director 4/5 data extractor
             gdb # Debugger
