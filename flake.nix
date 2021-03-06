@@ -132,7 +132,7 @@
             '';
 
             meta = with lib; {
-              description = "Macromedia Director 5 DRI and DRX files data extractor";
+              description = "Director 5 DRI and DRX files data extractor";
               license = licenses.gpl2;
               maintainers = maintainers.yegortimoshenko;
               platforms = platforms.unix;
@@ -152,7 +152,7 @@
             '';
 
             meta = with lib; {
-              description = "Lingo decompiler for Adobe Shockwave/Director";
+              description = "Lingo decompiler for Director";
               license = with licenses; [ asl20 mit ];
               maintainers = maintainers.yegortimoshenko;
               platforms = platforms.unix;
