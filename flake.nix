@@ -190,7 +190,7 @@
             };
           };
 
-          scummvm = scummvm.overrideAttrs (super: {
+          scummvm = (scummvm.overrideAttrs (super: {
             pname = "scummvm-director";
             version = inputs.scummvm.rev;
 
@@ -204,7 +204,9 @@
             meta = super.meta // {
               platforms = lib.platforms.unix;
             };
-          });
+          })).override {
+            alsaLib = lib.optional stdenv.isLinux alsaLib;
+          };
         }
       );
 
