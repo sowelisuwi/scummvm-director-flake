@@ -1,21 +1,5 @@
 {
   "nodes": {
-    "ProjectorRays": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1614790600,
-        "narHash": "sha256-8TdFGq0r86mAhRkpMZNoP+Cu20p9gJSxNJVX+npoMXA=",
-        "owner": "ProjectorRays",
-        "repo": "ProjectorRays",
-        "rev": "a718ac34fc8a39a10bece1a4ee3a0dcbdb7bc078",
-        "type": "github"
-      },
-      "original": {
-        "owner": "ProjectorRays",
-        "repo": "ProjectorRays",
-        "type": "github"
-      }
-    },
     "drxtract": {
       "flake": false,
       "locked": {
@@ -48,11 +32,27 @@
         "type": "github"
       }
     },
+    "projectorrays": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1614790600,
+        "narHash": "sha256-8TdFGq0r86mAhRkpMZNoP+Cu20p9gJSxNJVX+npoMXA=",
+        "owner": "ProjectorRays",
+        "repo": "ProjectorRays",
+        "rev": "a718ac34fc8a39a10bece1a4ee3a0dcbdb7bc078",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ProjectorRays",
+        "repo": "ProjectorRays",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "ProjectorRays": "ProjectorRays",
         "drxtract": "drxtract",
         "nixpkgs": "nixpkgs",
+        "projectorrays": "projectorrays",
         "scummvm": "scummvm"
       }
     },

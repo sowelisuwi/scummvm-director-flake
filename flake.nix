@@ -12,7 +12,7 @@
       flake = true;
     };
 
-    ProjectorRays = {
+    projectorrays = {
       url = "github:ProjectorRays/ProjectorRays";
       flake = false;
     };
@@ -172,9 +172,9 @@
 
           projectorrays = stdenv.mkDerivation {
             pname = "projectorrays";
-            version = inputs.ProjectorRays.rev;
+            version = inputs.projectorrays.rev;
 
-            src = inputs.ProjectorRays;
+            src = inputs.projectorrays;
 
             buildInputs = [ boost17x zlib ];
 
