@@ -200,6 +200,10 @@
               "--disable-all-engines"
               "--enable-engine=director"
             ];
+
+            meta = super.meta // {
+              platforms = lib.platforms.unix;
+            };
           });
         }
       );
