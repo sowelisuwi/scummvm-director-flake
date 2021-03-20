@@ -82,7 +82,7 @@
             meta = with lib; {
               description = "68k Macintosh emulator";
               license = licenses.gpl2;
-              maintainers = maintainers.yegortimoshenko;
+              maintainers = [ maintainers.yegortimoshenko ];
               platforms = platforms.unix;
             };
           };
@@ -109,7 +109,7 @@
             meta = with lib; {
               description = "Player for Macromedia Director 4 movie files";
               license = licenses.unfree; # https://github.com/renaldobf/D4Player/issues/2
-              maintainers = maintainers.yegortimoshenko;
+              maintainers = [ maintainers.yegortimoshenko ];
               platforms = platforms.unix;
             };
           };
@@ -140,7 +140,7 @@
             meta = with lib; {
               description = "Extract Director movies and casts from Windows and Mac executables";
               license = licenses.unfree; # https://github.com/maichiu/director-files-extract/issues/4
-              maintainers = maintainers.yegortimoshenko;
+              maintainers = [ maintainers.yegortimoshenko ];
               platforms = platforms.unix;
             };
           };
@@ -165,7 +165,7 @@
             meta = with lib; {
               description = "Director 5 DRI and DRX files data extractor";
               license = licenses.gpl2;
-              maintainers = maintainers.yegortimoshenko;
+              maintainers = [ maintainers.yegortimoshenko ];
               platforms = platforms.unix;
             };
           };
@@ -185,7 +185,7 @@
             meta = with lib; {
               description = "Lingo decompiler for Director";
               license = with licenses; [ asl20 mit ];
-              maintainers = maintainers.yegortimoshenko;
+              maintainers = [ maintainers.yegortimoshenko ];
               platforms = platforms.unix;
             };
           };
